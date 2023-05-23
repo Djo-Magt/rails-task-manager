@@ -1,0 +1,10 @@
+<h1><%= @task.title %></h1>
+
+<%= form_with model: @task, method: :patch, url: task_path(@task) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :details %>
+  <%= f.text_field :details %>
+  <%= f.check_box :completed %>
+  <%= f.submit %>
+<% end %>
